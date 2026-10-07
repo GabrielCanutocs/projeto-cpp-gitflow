@@ -10,3 +10,15 @@ long long calcularFatorial(int n) {
     }
     return resultado;
 }
+
+bool ehPrimo(int n) {
+    if (n < 2) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}

@@ -24,6 +24,28 @@ int main() {
         erros++;
     }
 
+    // ehPrimo
+    if (!ehPrimo(2)) {
+        cout << "ERRO: 2 eh primo" << endl;
+        erros++;
+    }
+    if (!ehPrimo(13)) {
+        cout << "ERRO: 13 eh primo" << endl;
+        erros++;
+    }
+    if (ehPrimo(1)) {
+        cout << "ERRO: 1 nao eh primo" << endl;
+        erros++;
+    }
+    if (ehPrimo(15)) {
+        cout << "ERRO: 15 nao eh primo" << endl;
+        erros++;
+    }
+    if (ehPrimo(-7)) {
+        cout << "ERRO: negativo nao eh primo" << endl;
+        erros++;
+    }
+
     if (erros == 0) {
         cout << "Todos os testes passaram!" << endl;
     }
