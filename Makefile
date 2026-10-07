@@ -12,3 +12,12 @@ bin/%.o: src/%.cpp
 
 clean:
 	rm -f bin/*.o bin/*.exe
+
+# testes
+LIB = $(filter-out bin/main.o, $(OBJ))
+
+teste: bin/testeRegressivo.exe
+	./bin/testeRegressivo.exe
+
+bin/testeRegressivo.exe: test/main.cpp $(LIB)
+	$(CXX) $(CXXFLAGS) test/main.cpp $(LIB) -o $@
